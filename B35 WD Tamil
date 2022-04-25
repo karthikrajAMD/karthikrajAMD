@@ -1,0 +1,37 @@
+1).
+
+GivenJSON = '{"name":"John", "age":30, "car":"Wagon R"}';
+var JsObj = JSON.parse(GivenJSON);
+console.log(JsObj);
+
+console.log("For in Loop...");
+for (var k in JsObj) {
+  console.log(k, "the value is", JsObj[k]);
+}
+console.log("For of Loop...");
+for (var k1 of Object.keys(JsObj)) {
+  console.log(k1, "the value is", JsObj[k1]);
+}
+console.log("Normal For Loop...");
+
+for (var i = 0; i < 3; i++) {
+  const key = Object.keys(JsObj)[i];
+  const val = Object.values(JsObj)[i];
+  console.log(key, "the value is", val);
+}
+
+
+2).
+
+var Resume = {
+  Name: "Karthik Raja",
+  Age: 24,
+  Degree: "B.E ECE",
+  CollegeName: "SRIT",
+  Percentage: 64,
+  Passed_out: 2019,
+};
+console.log(Resume);
+console.log("Convertinmg to JSON Format");
+
+console.log(JSON.stringify(Resume));
